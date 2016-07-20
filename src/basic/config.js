@@ -13,6 +13,11 @@ fcViews.basicWeek = {
 	duration: { weeks: 1 }
 };
 
+fcViews.basicYear = {
+	type: 'basic',
+	duration: { years: 1 }
+};
+
 fcViews.month = {
 	'class': MonthView,
 	duration: { months: 1 }, // important for prev/next

@@ -66,3 +66,13 @@
 	   might want to set the 'color' property instead
 	   making day-numbers bold also fixes the problem */
 }
+
+.monthname {
+  text-align: center;
+  border-top: 1px solid lightgray;
+}
+
+.monthname h2 {
+  padding: 12px 0 6px 0;
+  margin: 0;
+}

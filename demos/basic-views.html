@@ -15,11 +15,12 @@
 			header: {
 				left: 'prev,next today',
 				center: 'title',
-				right: 'month,basicWeek,basicDay'
+				right: 'basicYear,month,basicWeek,basicDay'
 			},
 			defaultDate: '2016-06-12',
 			editable: true,
-			eventLimit: true, // allow "more" link when too many events
+      weekNumbers: true,
+			eventLimit: false, // allow "more" link when too many events
 			events: [
 				{
 					title: 'All Day Event',

@@ -86,6 +86,19 @@ var BasicView = FC.BasicView = View.extend({
 
 		this.dayGrid.setElement(dayGridEl);
 		this.dayGrid.renderDates(this.hasRigidRows());
+
+    if($(".fc-basicYear-button").hasClass("fc-state-active")) {
+      var oldMonth;
+      $(".fc-row.fc-week").each(function() {
+        var month = $($(this).find(".fc-content-skeleton table thead").get(0)).find("td").data("month");
+        var check = oldMonth !== month;
+
+        if(check) {
+          $('<div class="monthname"><h2>' + month + '</h2></div>').insertBefore(this);
+          oldMonth = month;
+        };
+      });
+    }
 	},
 
 
@@ -362,10 +375,11 @@ var basicDayGridMethods = {
 	// Generates the HTML that will go before content-skeleton cells that display the day/week numbers
 	renderNumberIntroHtml: function(row) {
 		var view = this.view;
+    var month = this.getCellDate(row, 0).format('MMMM');
 
 		if (view.weekNumbersVisible) {
 			return '' +
-				'<td class="fc-week-number" ' + view.weekNumberStyleAttr() + '>' +
+				'<td data-month="' + month + '" class="fc-week-number" ' + view.weekNumberStyleAttr() + '>' +
 					'<span>' + // needed for matchCellWidths
 						this.getCellDate(row, 0).format('w') +
 					'</span>' +
