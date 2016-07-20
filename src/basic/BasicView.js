@@ -87,7 +87,7 @@ var BasicView = FC.BasicView = View.extend({
 		this.dayGrid.setElement(dayGridEl);
 		this.dayGrid.renderDates(this.hasRigidRows());
 
-    if($(".fc-basicYear-button").hasClass("fc-state-active")) {
+    if($(".fc-basicYear-button").hasClass("fc-state-active") || $(".fc-basicYear-button").hasClass("ui-state-active")) {
       var oldMonth;
       $(".fc-row.fc-week").each(function() {
         var month = $($(this).find(".fc-content-skeleton table thead").get(0)).find("td").data("month");
