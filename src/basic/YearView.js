@@ -20,4 +20,20 @@ var YearView = FC.YearView = BasicView.extend({
 	}
 });
 
+basicDayGridMethods.renderNumberIntroHtml = function(row) {
+  this.renderNumberIntroHtml();
+  var view = this.view;
 
+  var monthName = '<span>' + this.getCellDate(row, 0).format('M') + '</span>';
+
+  if (view.weekNumbersVisible) {
+    return '' +
+      '<td class="fc-week-number" ' + view.weekNumberStyleAttr() + '>' +
+        '<span>' + // needed for matchCellWidths
+          this.getCellDate(row, 0).format('w') +
+        '</span>' + monthName +
+      '</td>';
+  }
+
+  return '';
+};
