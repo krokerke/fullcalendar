@@ -5,7 +5,8 @@ $.fullCalendar.lang("de", {
 		month: "Monat",
 		week: "Woche",
 		day: "Tag",
-		list: "Terminübersicht"
+		list: "Terminübersicht",
+		today: "Heute"
 	},
 	allDayText: "Ganztägig",
 	eventLimitText: function(n) {
