@@ -23,6 +23,7 @@
   "copyright": "2016 Adam Shaw",
   "dependencies": {
     "jquery": ">=1.7.1",
+    "lodash": "^4.16.4",
     "moment": ">=2.5.0"
   },
   "version": "0.0.0",
@@ -60,7 +61,7 @@
     "CONTRIBUTING.*"
   ],
   "scripts": {
-    "test" : "grunt dev && grunt karma:single",
-    "lint" : "grunt check"
+    "test": "grunt dev && grunt karma:single",
+    "lint": "grunt check"
   }
 }

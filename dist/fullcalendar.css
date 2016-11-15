@@ -1,5 +1,5 @@
 /*!
- * FullCalendar v0.0.0 Stylesheet
+ * FullCalendaryear v0.0.0 Stylesheet
  * Docs & License: http://fullcalendar.io/
  * (c) 2016 Adam Shaw
  */
@@ -937,12 +937,28 @@ a.fc-more:hover {
 
 .monthname {
   text-align: center;
+}
+
+.monthname:first-child {
+  page-break-before: avoid !important; /* avoid for first month; prevents empty page */
+}
+
+.monthname:not(:first-child) {
   border-top: 1px solid lightgray;
+  page-break-before: always;
 }
 
 .monthname h2 {
   padding: 12px 0 6px 0;
   margin: 0;
+}
+
+.fc-basicYear-view thead {
+  display: table-row-group !important;
+}
+
+.weekHeader > div:first-child {
+  min-height: 0 !important;
 }
 
 /* AgendaView all-day area

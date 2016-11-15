@@ -1,5 +1,5 @@
 /*!
- * FullCalendar v0.0.0 Google Calendar Plugin
+ * FullCalendaryear v0.0.0 Google Calendar Plugin
  * Docs & License: http://fullcalendar.io/
  * (c) 2016 Adam Shaw
  */

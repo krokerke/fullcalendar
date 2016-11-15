@@ -1,5 +1,5 @@
 /*!
- * FullCalendar v0.0.0
+ * FullCalendaryear v0.0.0
  * Docs & License: http://fullcalendar.io/
  * (c) 2016 Adam Shaw
  */
@@ -12155,8 +12155,18 @@ var BasicView = FC.BasicView = View.extend({
         var month = $($(this).find(".fc-content-skeleton table thead").get(0)).find("td").data("month");
         var check = oldMonth !== month;
 
+        var weeks;
+        if($(".weekHeader").length) {
+          weeks = $('.weekHeader').html();
+          $('.fc-basicYear-view thead.fc-head:not(.weekHeader)').remove();
+        } else {
+          weeks = $('.fc-basicYear-view thead.fc-head').html();
+        }
+        var weekHeader = '<div class="weekHeader" style="display:table-row-group;">' + weeks + '</div>';
+
         if(check) {
           $('<div class="monthname"><h2>' + month + '</h2></div>').insertBefore(this);
+          $(weekHeader).insertBefore(this);
           oldMonth = month;
         };
       });
